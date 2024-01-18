@@ -4,24 +4,25 @@
 #define COLS 10
 
 void displayWindow(){
+    system("CLS");
     for(int i=0; i< ROWS; i++){
         std::cout<<"#"<<std::endl;
     }
     for(int i=0;i<ROWS;i++){
-        std::cout<<"#"<<std::endl;
+        std::cout<<"#";
         for(int j=0;j<COLS;j++){
-            std::cout<<""<<std::endl;
+            std::cout<<"";
         }
         std::cout<<"#"<<std::endl;
     }
     for(int i=0; i<ROWS; i++){
-        std::cout<<"#"<<std::endl;
+        std::cout<<"#";
     }
-    system(0);
+    
 }
 
 int main(){
-    while (getline()!="x")
+    while (true)
     {
         displayWindow();
     }
