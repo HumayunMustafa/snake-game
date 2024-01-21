@@ -1,22 +1,18 @@
 #ifndef FRAME_H
 #define FRAME_H
 
+#define UNUSED_FUNCTION __attribute__((unused))
+
 class frame
 {
 private:
-    /* data */
+    const int ROWS=10;
+    const int COLS=10;
+
 public:
-    frame(/* args */);
-    ~frame();
+    void loadFrame() UNUSED_FUNCTION;
+    void printFrame() UNUSED_FUNCTION; 
 };
-
-frame::frame(/* args */)
-{
-}
-
-frame::~frame()
-{
-}
 
 
 #endif
