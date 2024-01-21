@@ -5,7 +5,7 @@
 
 class frame
 {
-private:
+protected:
     const int ROWS=10;
     const int COLS=10;
 
