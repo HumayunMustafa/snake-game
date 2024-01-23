@@ -1,8 +1,12 @@
 #include "snake.h"
 #include "frame.h"
+ 
 
 class logic: public snake, public frame{
     protected:
-        bool gameOver=false, extend=false;
-        int fruit=0;
+        bool gameOverCheck=false, extend=false;
+        int score=0;
+    public:
+        void gameOver() NOT_IMPLEMENTED;
+        void refresh() NOT_IMPLEMENTED;
 };
