@@ -7,6 +7,8 @@ class Snake{
     protected:
         const char head='O';
         const char body='o';
+        int input;
+        int prevInput='w';
         int extend;
         std::vector<int> bodyX;
         std::vector<int> bodyY;
@@ -16,8 +18,9 @@ class Snake{
         int foodX,foodY;
     public:
         Snake() :extend{false} {}
-        void growSnake() NOT_IMPLEMENTED;
+        void growSnake(int r,int c) NOT_IMPLEMENTED;
         bool checkSnake() NOT_IMPLEMENTED;
+        void move() NOT_IMPLEMENTED;
 };
 
 #endif

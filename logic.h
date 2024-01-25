@@ -9,7 +9,6 @@ class Logic : public Board{
         Logic() : gameOver{true} {}
         void gameBegin() NOT_IMPLEMENTED;
         void checkGameOver() NOT_IMPLEMENTED;
-        void move() NOT_IMPLEMENTED;
 };
 
 #endif
