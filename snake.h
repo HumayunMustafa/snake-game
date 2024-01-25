@@ -19,7 +19,7 @@ class Snake{
         const char food='f';
         int foodX,foodY;
     public:
-        Snake() :extend{false} {}
+        Snake() :extend{false}, tempX{0}, tempY{0} {}
         void growSnake(int r,int c) NOT_IMPLEMENTED;
         bool checkSnake() NOT_IMPLEMENTED;
         void move() NOT_IMPLEMENTED;
