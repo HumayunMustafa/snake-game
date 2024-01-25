@@ -1,8 +1,8 @@
 #include <iostream>
-#include "frame.h"
+#include "logic.h"
 
 int main(){
-    frame f;
-    f.printFrame();
+    Logic l;
+    l.gameBegin();
     return 0;
 }

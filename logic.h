@@ -1,12 +1,14 @@
-#include "snake.h"
-#include "frame.h"
- 
+#ifndef LOGIC_H
+#define LOGIC_H
+#include "board.h"
 
-class logic: public snake, public frame{
-    protected:
-        bool gameOverCheck=false, extend=false;
-        int score=0;
+class Logic : public Board{
+    private:
+        bool gameOver;
     public:
-        void gameOver() NOT_IMPLEMENTED;
-        void refresh() NOT_IMPLEMENTED;
+        Logic() : gameOver{true} {}
+        void gameBegin() NOT_IMPLEMENTED;
+        void checkGameOver() NOT_IMPLEMENTED;
 };
+
+#endif
