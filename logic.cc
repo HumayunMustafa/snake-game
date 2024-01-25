@@ -5,9 +5,8 @@ void Logic::gameBegin(){
     do{
         checkGameOver();
         printBoard();
-        growSnake(ROWS,COLS);
         move();
-        
+        growSnake(ROWS,COLS);
     }
     while(gameOver);
 }
@@ -36,11 +35,17 @@ void Board::printBoard(){
 
 void Snake::growSnake(int r,int c){
     if(headX==foodX && headY==foodY) {
-        bodyX.push_back(headX+2);
-        bodyY.push_back(headY+2);
+        if(bodyX.size()==0){
+            bodyX.push_back(tempX);
+            bodyY.push_back(tempY);
+        }
+        else{
+            bodyX.push_back(bodyX[bodyX.size()-1]);
+            bodyY.push_back(bodyY[bodyY.size()-1]);
+        }
         extend=true;
-        foodX++;
-        foodY++;
+        foodX=rand() % r;
+        foodY=rand()%c;
     }
 }
 
@@ -52,7 +57,7 @@ bool Snake::checkSnake(){
 }
 
 void Snake::move(){
-    int tempX=headX, tempY=headY;
+    tempX=headX, tempY=headY;
     input=getchar();
     switch (input)
     {

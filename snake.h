@@ -12,6 +12,8 @@ class Snake{
         int extend;
         std::vector<int> bodyX;
         std::vector<int> bodyY;
+        int tempX;
+        int tempY;
         int headX;
         int headY;
         const char food='f';
