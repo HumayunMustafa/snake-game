@@ -4,10 +4,9 @@
 void Logic::gameBegin(){
     do{
         checkGameOver();
-        if(gameOver && checkSnake()) printBoard();
-        else break;
+        printBoard();
     }
-    while(gameOver);
+    while(gameOver && checkSnake());
 }
 
 
@@ -26,6 +25,13 @@ void Board::printBoard(){
     }
     for(int i=0; i<COLS+2;i++) std::cout<<"#";
     std::cout<<std::endl;
+}
+
+void Snake::growSnake(){
+    if(headX==foodX && headY==foodY) {
+        bodyX.push_back(headX);
+        bodyY.push_back(headY);
+    }
 }
 
 bool Snake::checkSnake(){
